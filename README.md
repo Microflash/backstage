@@ -1,6 +1,6 @@
-# Guides
+# Backstage
 
-Source code of the examples published on [naiyerasif.com](https://www.naiyerasif.com)
+Source code of examples published on [naiyerasif.com](https://www.naiyerasif.com)
 
 ## Sections
 

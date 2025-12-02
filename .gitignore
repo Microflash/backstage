@@ -1,51 +1,74 @@
-# build directories
-**/build
-**/dist
-**/target
-**/out
+# aws
+.aws/
 
-# logs
-**/logs
+# build and output directories
+build/
+dist/
+target/
+out/
+.astro/
+*.class
+*.jar
+*.war
+*.ear
 
-# gradle
-**/.gradle
+# dependency directories
+node_modules/
+.venv/
+venv/
+__pycache__/
 
-# idea
-**/.idea
-*.iws
+# eclipse
+.apt_generated/
+.classpath/
+.factorypath/
+.project/
+.settings/
+.springBeans/
+.sts4-cache/
+
+# java
+.gradle/
+.mvn/
+.settings/
+.classpath
+.project
+
+# jetbrains
+.idea/
 *.iml
 *.ipr
+*.iws
 
-# mac
-.DS_Store
+# logs and temp directories
+logs/
+*.log
+*.tmp
+*.swp
 
 # netbeans
-**/nbproject/private
-**/nbbuild
-**/nbdist
-**/.nb-gradle
+nbproject/private/
+nbbuild/
+nbdist/
+.nb-gradle/
 
-# node
-**/node_modules
-
-# python
-**/.venv
-**/__pycache__
+# os-specific
+.DS_Store
+Thumbs.db
 
 # spring
-**/HELP.md
+HELP.md
 
-# sts/eclipse
-**/.apt_generated
-**/.classpath
-**/.factorypath
-**/.project
-**/.settings
-**/.springBeans
-**/.sts4-cache
+# sublimetext
+*.sublime-workspace
+*.sublime-project
 
 # vscode
-**/.vscode
+.vscode/
 
 # workspace
-**/.workspace
+.workspace
+
+# zed
+.ropeproject/
+.zed/

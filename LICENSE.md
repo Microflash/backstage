@@ -1,6 +1,6 @@
 # MIT License
 
-Copyright &copy; 2015 &mdash; present Naiyer Asif
+Copyright © 2015—present Naiyer Asif
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
