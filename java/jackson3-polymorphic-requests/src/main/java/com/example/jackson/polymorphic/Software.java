@@ -1,4 +1,4 @@
-package dev.mflash.guides.java.jackson.polymorphic;
+package com.example.jackson.polymorphic;
 
 public record Software(
 		String os,

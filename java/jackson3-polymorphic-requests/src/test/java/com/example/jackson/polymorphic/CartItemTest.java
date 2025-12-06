@@ -1,22 +1,21 @@
-package dev.mflash.guides.java.jackson.polymorphic;
+package com.example.jackson.polymorphic;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.catchException;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.exc.InvalidTypeIdException;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import tools.jackson.databind.exc.InvalidTypeIdException;
+import tools.jackson.databind.json.JsonMapper;
 
 class CartItemTest {
 
-	private static final ObjectMapper mapper = new ObjectMapper();
+	private static final JsonMapper mapper = new JsonMapper();
 
 	@Test
 	@DisplayName("Should parse item as Software")
-	void shouldParseItemAsSoftware() throws JsonProcessingException {
-		final var item = """
+	void shouldParseItemAsSoftware() {
+		final var item = /* language=JSON */ """
 				{
 					"itemCategory": "SOFTWARE",
 					"os": "Windows",
@@ -34,8 +33,8 @@ class CartItemTest {
 
 	@Test
 	@DisplayName("Should parse item as Accessory")
-	void shouldParseItemAsAccessory() throws JsonProcessingException {
-		final var item = """
+	void shouldParseItemAsAccessory() {
+		final var item = /* language=JSON */ """
 				{
 					"itemCategory": "ACCESSORY",
 					"brand": "Dell",
@@ -54,7 +53,7 @@ class CartItemTest {
 	@Test
 	@DisplayName("Should throw exception on unknown item")
 	void shouldThrowExceptionOnUnknownItem() {
-		final var item = """
+		final var item = /* language=JSON */ """
 				{
 					"itemCategory": "SNACK",
 					"speciality": "Vegetarian",

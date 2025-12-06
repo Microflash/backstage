@@ -1,4 +1,4 @@
-package dev.mflash.guides.java.jackson.polymorphic;
+package com.example.jackson.polymorphic;
 
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
