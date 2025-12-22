@@ -16,6 +16,7 @@ Source code of examples published on [naiyerasif.com](https://www.naiyerasif.com
 - [Node.js](./nodejs)
 - [Python](./python)
 - [Spring](./spring)
+  - [Logging methods with AspectJ in a Spring application](./spring/springboot4-aop-method-logging/)
 - [Miscellaneous](./miscellaneous)
 
 ## License
