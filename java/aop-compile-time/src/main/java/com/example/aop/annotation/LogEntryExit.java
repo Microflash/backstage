@@ -1,4 +1,6 @@
-package dev.mflash.guides.java.aop.logging.annotation;
+package com.example.aop.annotation;
+
+import org.slf4j.event.Level;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -10,13 +12,13 @@ import java.time.temporal.ChronoUnit;
 @Target(ElementType.METHOD)
 public @interface LogEntryExit {
 
-  LogLevel value() default LogLevel.INFO;
+	Level value() default Level.INFO;
 
-  ChronoUnit unit() default ChronoUnit.SECONDS;
+	ChronoUnit unit() default ChronoUnit.SECONDS;
 
-  boolean showArgs() default false;
+	boolean showArgs() default false;
 
-  boolean showResult() default false;
+	boolean showResult() default false;
 
-  boolean showExecutionTime() default true;
+	boolean showExecutionTime() default true;
 }

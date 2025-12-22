@@ -1,4 +1,4 @@
-package dev.mflash.guides.java.aop.logging;
+package com.example.aop.aspect;
 
 import ch.qos.logback.classic.spi.ILoggingEvent;
 import ch.qos.logback.core.AppenderBase;
@@ -8,10 +8,10 @@ import java.util.List;
 
 public class AspectAppender extends AppenderBase<ILoggingEvent> {
 
-  public final List<ILoggingEvent> events = new ArrayList<>();
+	final List<ILoggingEvent> events = new ArrayList<>();
 
-  @Override
-  protected void append(ILoggingEvent event) {
-    events.add(event);
-  }
+	@Override
+	protected void append(ILoggingEvent event) {
+		events.add(event);
+	}
 }
