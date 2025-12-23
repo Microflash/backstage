@@ -12,6 +12,8 @@ Source code of examples published on [naiyerasif.com](https://www.naiyerasif.com
   - [Java-based health check for Docker](./java/docker-healthcheck/)
   - [Polymorphic Requests with Jackson](./java/jackson3-polymorphic-requests/)
   - [Weaving aspects at compile-time with AspectJ](./java/aop-compile-time/)
+- [JavaScript](./javascript/)
+  - [How to dispose JavaScript objects](./javascript/js-resource-management/)
 - [Micronaut](./micronaut)
 - [Node.js](./nodejs)
 - [Python](./python)

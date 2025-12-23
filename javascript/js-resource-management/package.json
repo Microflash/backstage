@@ -1,0 +1,13 @@
+{
+	"name": "js-resource-management",
+	"version": "1.0.0",
+	"type": "module",
+	"main": "src/index.js",
+	"scripts": {
+		"test": "node --test test/autodisposable.test.js"
+	},
+	"dependencies": {
+		"iovalkey": "^0.3.3"
+	},
+	"packageManager": "pnpm@10.26.1"
+}
