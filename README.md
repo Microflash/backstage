@@ -19,7 +19,8 @@ Source code of examples published on [naiyerasif.com](https://www.naiyerasif.com
 - [Python](./python)
 - [Spring](./spring)
   - [Logging methods with AspectJ in a Spring application](./spring/springboot4-aop-method-logging/)
-- [Miscellaneous](./miscellaneous)
+- [Miscellaneous](./misc)
+  - [Client Credentials flow with Ory Hydra](./misc/ory-hydra-25--client-credentials-flow/)
 
 ## License
 

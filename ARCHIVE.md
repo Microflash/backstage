@@ -4,8 +4,10 @@ Source code of archived examples from [naiyerasif.com](https://www.naiyerasif.co
 
 ## Sections
 
-- [Spring](./spring)
+- [Spring](./@/archives/spring/)
   - [Logging methods with AspectJ in a Spring application](./@/archives/spring/springboot3-aop-method-logging/)
+- [Miscellaneous](./@/archives/misc/)
+  - [Client Credentials flow with Ory Hydra](./@/archives/misc/ory-hydra-1--client-credentials-flow/)
 
 ## License
 

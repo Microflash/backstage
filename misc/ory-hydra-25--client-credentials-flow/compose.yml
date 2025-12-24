@@ -1,32 +1,31 @@
 services:
-
   hydra:
-    image: oryd/hydra:v2.1.2
+    image: oryd/hydra:v25.4.0
     ports:
       - "4444:4444" # Public port
       - "4445:4445" # Admin port
       - "5555:5555" # Port for hydra token user
-    command: serve all --dev
     environment:
-      - SECRETS_SYSTEM=global_secret_to_encrypt_db
       - DSN=postgres://hydra:secret@postgresd:5432/hydra?sslmode=disable&max_conns=20&max_idle_conns=4
+      - SECRETS_SYSTEM=secret_to_encrypt_database # See https://www.ory.com/docs/hydra/self-hosted/secrets-key-rotation
+    command: serve all --dev
     restart: unless-stopped
     depends_on:
       - hydra-migrate
     networks:
       - hydranet
-
   hydra-migrate:
-    image: oryd/hydra:v2.1.2
+    image: oryd/hydra:v25.4.0
     environment:
       - DSN=postgres://hydra:secret@postgresd:5432/hydra?sslmode=disable&max_conns=20&max_idle_conns=4
-    command: migrate sql -e --yes
+    command: migrate sql up -e --yes
     restart: on-failure
+    depends_on:
+      - postgresd
     networks:
       - hydranet
-
   postgresd:
-    image: postgres:11.8
+    image: postgres:18-alpine
     ports:
       - "5432:5432"
     environment:
