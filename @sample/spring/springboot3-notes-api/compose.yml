@@ -1,9 +1,0 @@
-services:
-  postgres:
-    image: postgres:16-alpine
-    ports:
-      - 5432:5432
-    environment:
-      POSTGRES_USER: gwen
-      POSTGRES_PASSWORD: stacy
-      POSTGRES_DB: brooklyn

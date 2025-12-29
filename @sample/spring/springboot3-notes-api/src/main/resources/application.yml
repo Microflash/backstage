@@ -1,6 +1,0 @@
-spring:
-  datasource:
-    password: stacy
-    username: gwen
-    url: jdbc:postgresql://localhost:5432/brooklyn
-  sql.init.mode: always
