@@ -20,7 +20,7 @@ public class RSAKeyGenerator {
 		}
 	}
 
-	public static void main(String[] args) throws IOException {
+	void main() throws IOException {
 		var keyPair = KEY_PAIR_GENERATOR.generateKeyPair();
 		writeKeyPair(keyPair, Paths.get("src/main/resources"));
 	}

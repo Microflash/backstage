@@ -19,6 +19,7 @@ Source code of examples published on [naiyerasif.com](https://www.naiyerasif.com
 - [Python](./python)
 - [Spring](./spring)
   - [Logging methods with AspectJ in a Spring application](./spring/springboot4-aop-method-logging/)
+  - [Securing Spring Boot APIs with JWT Authentication](./spring/spring-security-jwt-auth/) - [custom user](./spring/spring-security-jwt-auth-custom-user/), [custom signature algorithm](./spring/spring-security-jwt-auth-eddsa/)
 - [Miscellaneous](./misc)
   - [Client Credentials flow with Ory Hydra](./misc/ory-hydra-25--client-credentials-flow/)
 

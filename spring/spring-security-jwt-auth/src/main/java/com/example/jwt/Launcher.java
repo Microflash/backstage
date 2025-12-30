@@ -8,7 +8,7 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 @EnableConfigurationProperties(JwtProperties.class)
 public class Launcher {
 
-	public static void main(String[] args) {
+	static void main(String... args) {
 		SpringApplication.run(Launcher.class, args);
 	}
 }
