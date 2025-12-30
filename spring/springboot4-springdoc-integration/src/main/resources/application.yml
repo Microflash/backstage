@@ -1,0 +1,24 @@
+spring:
+  profiles.active: local
+  jackson:
+    default-property-inclusion: non_null
+    deserialization:
+      fail-on-unknown-properties: false
+
+openapi:
+  info:
+    title: "Tasks API"
+    description: "Springdoc integration with custom configuration"
+    version: "@project.version@"
+    license:
+      name: MIT
+      url: "https://opensource.org/licenses/MIT"
+  security:
+    - BearerToken:
+  components:
+    security-schemes:
+      BearerToken:
+        name: BearerToken
+        type: HTTP
+        scheme: bearer
+        bearer-format: JWT

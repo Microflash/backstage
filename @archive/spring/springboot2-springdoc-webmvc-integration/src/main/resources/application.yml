@@ -1,6 +1,0 @@
-spring:
-  datasource:
-    platform: postgres
-    url: jdbc:postgresql://localhost:5432/spring
-    username: erin
-    password: richards
