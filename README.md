@@ -17,13 +17,13 @@ Source code of examples published on [naiyerasif.com](https://www.naiyerasif.com
 - [Micronaut](./micronaut)
 - [Node.js](./nodejs)
 - [Python](./python)
+  - [How I subset fonts for my site](./python/fonttools--webfont-subsetting/)
 - [Spring](./spring)
   - [API documentation with springdoc-openapi](./spring/springboot4-springdoc-integration/)
   - [Logging methods with AspectJ in a Spring application](./spring/springboot4-aop-method-logging/)
   - [Securing Spring Boot APIs with JWT Authentication](./spring/spring-security-jwt-auth/) - [custom user](./spring/spring-security-jwt-auth-custom-user/), [custom signature algorithm](./spring/spring-security-jwt-auth-eddsa/)
 - [Miscellaneous](./misc)
   - [Client Credentials flow with Ory Hydra](./misc/ory-hydra-25--client-credentials-flow/)
-  - [How I subset fonts for my site](./misc/webfont-subsetting/)
 
 ## License
 
