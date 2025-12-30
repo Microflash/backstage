@@ -22,6 +22,7 @@ Source code of examples published on [naiyerasif.com](https://www.naiyerasif.com
   - [Securing Spring Boot APIs with JWT Authentication](./spring/spring-security-jwt-auth/) - [custom user](./spring/spring-security-jwt-auth-custom-user/), [custom signature algorithm](./spring/spring-security-jwt-auth-eddsa/)
 - [Miscellaneous](./misc)
   - [Client Credentials flow with Ory Hydra](./misc/ory-hydra-25--client-credentials-flow/)
+  - [How I subset fonts for my site](./misc/webfont-subsetting/)
 
 ## License
 
