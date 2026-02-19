@@ -1,5 +1,8 @@
 package com.example.jackson.polymorphic;
 
+import com.fasterxml.jackson.annotation.JsonTypeName;
+
+@JsonTypeName("SOFTWARE")
 public record Software(
 		String os,
 		String manufacturer,

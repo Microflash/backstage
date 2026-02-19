@@ -1,7 +1,10 @@
 package com.example.jackson.polymorphic;
 
+import com.fasterxml.jackson.annotation.JsonTypeName;
+
 import java.util.List;
 
+@JsonTypeName("ACCESSORY")
 public record Accessory(
 		String brand,
 		String manufacturer,
