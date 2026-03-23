@@ -4,6 +4,8 @@ Source code of archived examples from [naiyerasif.com](https://www.naiyerasif.co
 
 ## Sections
 
+- [AWS](./@/archives/aws/)
+  - [Working with AWS on local using LocalStack](./@/archives/aws/localstack-with-aws-cli/)
 - [Spring](./@/archives/spring/)
   - [Logging methods with AspectJ in a Spring application](./@/archives/spring/springboot3-aop-method-logging/)
 - [Miscellaneous](./@/archives/misc/)

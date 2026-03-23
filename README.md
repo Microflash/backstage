@@ -5,6 +5,7 @@ Source code of examples published on [naiyerasif.com](https://www.naiyerasif.com
 ## Sections
 
 - [AWS](./aws/)
+  - [How to use AWS CLI with Floci for local development](./aws/floci-with-aws-cli/)
 - [Cloud](./cloud)
 - [Java](./java/)
   - [Code Coverage with JaCoCo and Maven](./java/jacoco-coverage-with-maven/)
