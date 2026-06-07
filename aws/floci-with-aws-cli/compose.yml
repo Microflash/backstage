@@ -1,15 +1,8 @@
 services:
   aws:
     container_name: floci-with-aws-cli
-    image: hectorvent/floci:1.0.4
+    image: floci/floci:1.5.22
     ports:
-      # for AWS API calls
       - "4566:4566"
-      # Elasticache proxy ports
-      - "6379-6399:6379-6399"
-      # RDS proxy ports
-      - "7001-7099:7001-7099"
     volumes:
-      # required for Lambda, ElastiCache, RDS
-      - "/var/run/docker.sock:/var/run/docker.sock"
       - "./data:/app/data"
