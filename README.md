@@ -6,6 +6,7 @@ Source code of examples published on [naiyerasif.com](https://www.naiyerasif.com
 
 - [AWS](./aws/)
   - [How to use AWS CLI with Floci for local development](./aws/floci-with-aws-cli/)
+  - [How to run SQS-triggered Lambda locally with Floci](./aws/floci-lambda-with-sqs-trigger/)
 - [Cloud](./cloud)
 - [Java](./java/)
   - [Code Coverage with JaCoCo and Maven](./java/jacoco-coverage-with-maven/)

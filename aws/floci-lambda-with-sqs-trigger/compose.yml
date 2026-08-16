@@ -1,0 +1,9 @@
+services:
+  aws:
+    container_name: floci-lambda-with-sqs-trigger
+    image: floci/floci:1.6.0
+    ports:
+      - "4566:4566"
+    volumes:
+      - "./data:/app/data"
+      - "/var/run/docker.sock:/var/run/docker.sock"
