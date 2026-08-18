@@ -5,6 +5,7 @@ Source code of examples published on [naiyerasif.com](https://www.naiyerasif.com
 ## Sections
 
 - [AWS](./aws/)
+  - [How to run EventRule-triggered Lambda locally with Floci](./aws/floci-lambda-with-eventbridge-rule-trigger/)
   - [How to run SNS-triggered Lambda locally with Floci](./aws/floci-lambda-with-sns-trigger/)
   - [How to run SQS-triggered Lambda locally with Floci](./aws/floci-lambda-with-sqs-trigger/)
   - [How to use AWS CLI with Floci for local development](./aws/floci-with-aws-cli/)

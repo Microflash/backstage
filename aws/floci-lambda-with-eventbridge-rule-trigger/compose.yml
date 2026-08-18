@@ -1,0 +1,9 @@
+services:
+  floci:
+    container_name: floci
+    image: floci/floci:1.7.0
+    ports:
+      - "4566:4566"
+    volumes:
+      - "./data:/app/data"
+      - "/var/run/docker.sock:/var/run/docker.sock"
