@@ -22,6 +22,7 @@ Source code of examples published on [naiyerasif.com](https://www.naiyerasif.com
 - [Node.js](./nodejs)
 - [Python](./python)
   - [How I subset fonts for my site](./python/fonttools--webfont-subsetting/)
+  - [How to write integration tests using Testcontainers in Python](./python/testcontainers-integration-tests-with-pytest/)
 - [Spring](./spring)
   - [API documentation with springdoc-openapi](./spring/springboot4-springdoc-integration/)
   - [Logging methods with AspectJ in a Spring application](./spring/springboot4-aop-method-logging/)

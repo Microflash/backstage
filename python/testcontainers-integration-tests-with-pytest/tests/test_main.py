@@ -1,8 +1,9 @@
 import json
 import os
 
+import boto3
 import pytest
-from testcontainers.localstack import LocalStackContainer
+from floci import FlociContainer
 from testcontainers.postgres import PostgresContainer
 
 from tests.mockutils import mock_module
@@ -11,12 +12,26 @@ object_key = "/root/text.txt"
 test_content = b"Hello from Testcontainers!"
 
 
+def floci_client(service_name, floci_container):
+    return boto3.client(
+        service_name,
+        endpoint_url=floci_container.get_endpoint(),
+        region_name=floci_container.get_region(),
+        aws_access_key_id=floci_container.get_access_key(),
+        aws_secret_access_key=floci_container.get_secret_key(),
+    )
+
+
 @pytest.fixture(scope="module", autouse=True)
 def setup():
     with (
-        LocalStackContainer(image="localstack/localstack:4.4.0") as localstack,
-        PostgresContainer(image="postgres:17-alpine") as postgres,
-        mock_module("app.aws", s3=localstack.get_client("s3"), secretsmanager=localstack.get_client("secretsmanager")),
+        FlociContainer(image="floci/floci:1.7.0") as floci,
+        PostgresContainer(image="postgres:18-alpine") as postgres,
+        mock_module(
+            "app.aws",
+            s3=floci_client("s3", floci),
+            secretsmanager=floci_client("secretsmanager", floci),
+        ),
     ):
         os.environ["APP_BUCKET_NAME"] = "test-bucket"
         os.environ["APP_DB_NAME"] = postgres.dbname
@@ -35,10 +50,7 @@ def setup():
 
         from app.conf import conf
 
-        s3.create_bucket(
-            Bucket=conf.bucket_name,
-            CreateBucketConfiguration={"LocationConstraint": localstack.region_name},
-        )
+        s3.create_bucket(Bucket=conf.bucket_name)
 
         from app.dbclient import connection
 
