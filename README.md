@@ -29,7 +29,7 @@ Source code of examples published on [naiyerasif.com](https://www.naiyerasif.com
   - [Messaging with RabbitMQ and Spring Boot](./spring/springboot4-messaging-rabbitmq/)
   - [Securing Spring Boot APIs with JWT Authentication](./spring/spring-security-jwt-auth/) - [custom user](./spring/spring-security-jwt-auth-custom-user/), [custom signature algorithm](./spring/spring-security-jwt-auth-eddsa/)
 - [Miscellaneous](./misc)
-  - [Client Credentials flow with Ory Hydra](./misc/ory-hydra-25--client-credentials-flow/)
+  - [Client Credentials flow with Ory Hydra](./miscellaneous/hydra26-client-credentials-flow/)
 
 ## License
 

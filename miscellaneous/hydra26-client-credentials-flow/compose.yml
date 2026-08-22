@@ -1,6 +1,6 @@
 services:
   hydra:
-    image: oryd/hydra:v25.4.0
+    image: oryd/hydra:v26.2.0-distroless
     ports:
       - "4444:4444" # Public port
       - "4445:4445" # Admin port
@@ -11,24 +11,32 @@ services:
     command: serve all --dev
     restart: unless-stopped
     depends_on:
-      - hydra-migrate
+      hydra-migrate:
+        condition: service_completed_successfully
     networks:
       - hydranet
   hydra-migrate:
-    image: oryd/hydra:v25.4.0
+    image: oryd/hydra:v26.2.0-distroless
     environment:
       - DSN=postgres://hydra:secret@postgresd:5432/hydra?sslmode=disable&max_conns=20&max_idle_conns=4
     command: migrate sql up -e --yes
     restart: on-failure
     depends_on:
-      - postgresd
+      postgresd:
+        condition: service_healthy
     networks:
       - hydranet
   postgresd:
     image: postgres:18-alpine
     ports:
       - "5432:5432"
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "hydra"]
+      interval: 1s
+      timeout: 30s
+      retries: 30
     environment:
+      - PGUSER=hydra
       - POSTGRES_USER=hydra
       - POSTGRES_PASSWORD=secret
       - POSTGRES_DB=hydra
